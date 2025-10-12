@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Strannuk/MegaLife2.0/main/images/banner.png" alt="MegaLife Banner" width="80%" style="border-radius:15px; box-shadow:0 0 20px #7f00ff;">
+  <img src="https://raw.githubusercontent.com/Strannuk/MegaLife2.0/main/images/logowithtext.svg" alt="MegaLife Banner" width="40%" style="border-radius:15px; box-shadow:0 0 20px #7f00ff;">
 </p>
 
 <h1 align="center">
@@ -34,14 +34,6 @@
 | 🔧 **Кастомизация** | CSS-переменные для изменения темы |
 | 🌐 **Совместимость** | Все современные браузеры |
 | 💻 **Быстрый старт** | Статический сайт — сервер не нужен |
-
----
-
-## 🎬 Демо
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Strannuk/MegaLife2.0/main/images/demo.gif" alt="MegaLife Demo" width="80%" style="border-radius:15px;box-shadow:0 0 20px #00fff7">
-</p>
 
 ---
 
@@ -103,32 +95,7 @@ open index.html
 
 ---
 
-## 🌐 Контакты
-
 <p align="center"> 
-  📞 +7 978 200-15-15 &nbsp; | &nbsp; ✉️ admin@crimea.mega-life.ru &nbsp; | &nbsp; 🔗 <a href="https://vk.com">VK</a> 
+  Сделано с ❤️
 </p>
 
----
-
-## 📄 Лицензия
-
-<p align="center"> 
-  MIT License — свободное использование и модификация. 
-</p> 
-
-<p align="center"> 
-  Сделано с ❤️ и футуристическим стилем 
-</p>
-
-<style> 
-@keyframes gradientMove { 
-  0%{background-position:0% 50%} 
-  50%{background-position:100% 50%} 
-  100%{background-position:0% 50%} 
-} 
-span:hover { 
-  transform: translateY(-5px) scale(1.05); 
-  box-shadow: 0 0 20px rgba(0,255,255,0.5); 
-} 
-</style>

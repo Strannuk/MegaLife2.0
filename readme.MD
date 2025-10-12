@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Strannuk/MegaLife2.0/main/images/banner.png" alt="MegaLife Banner" width="80%" style="border-radius:15px; box-shadow:0 0 20px #7f00ff;">
+  <img src="https://raw.githubusercontent.com/Strannuk/MegaLife2.0/main/images/logowithtext.svg" alt="MegaLife logo" width="80%" style="border-radius:15px; box-shadow:0 0 20px #7f00ff;">
 </p>
 
 <h1 align="center">

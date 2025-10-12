@@ -1,42 +1,105 @@
 // // // Анимация сайта
 
-// const sr = ScrollReveal({
-//   distance: "50px",
-//   duration: 800,
-//   easing: "ease-out",
-//   viewFactor: 0.3,
-//   reset: false,
-//   opacity: 0,
-// });
+document.addEventListener("DOMContentLoaded", () => {
+  // Инициализация ScrollReveal
+  const sr = ScrollReveal({
+    distance: "50px",
+    duration: 800,
+    easing: "ease-out",
+    viewFactor: 0.3,
+    reset: false,
+    opacity: 0,
+  });
 
-// sr.reveal(".why-us__title, .paid__tarifs-title", {
-//   origin: "bottom",
-//   duration: 1000,
-// });
+  // ==== Hero Section ====
+  sr.reveal(".hero__title, .hero__text", {
+    origin: "bottom",
+    interval: 200,
+    duration: 1000,
+  });
 
-// sr.reveal(".why-us__list-item", {
-//   origin: "right",
-//   interval: 300,
-// });
+  sr.reveal(".hero__button", {
+    origin: "bottom",
+    delay: 400,
+    duration: 1000,
+  });
 
-// document
-//   .querySelectorAll(".surveillance, .control")
-//   .forEach((article, index) => {
-//     sr.reveal(article, {
-//       origin: index % 2 === 0 ? "left" : "right",
-//       delay: index * 150,
-//     });
-//   });
+  // ==== Why Us Section ====
+  sr.reveal(".why-us__title", {
+    origin: "bottom",
+    duration: 1000,
+  });
 
-// const tarifs = document.querySelectorAll(".paid__tarifs-list-item");
-// tarifs.forEach((card, index) => {
-//   const groupIndex = Math.floor(index / 2);
-//   const origin = groupIndex % 2 === 0 ? "left" : "right";
-//   sr.reveal(card, {
-//     origin: origin,
-//     delay: index * 100,
-//   });
-// });
+  sr.reveal(".why-us__list-item", {
+    origin: "right",
+    interval: 200,
+  });
+
+  // ==== Surveillance & Control Sections ====
+  document.querySelectorAll(".surveillance, .control").forEach((article, index) => {
+    sr.reveal(article, {
+      origin: index % 2 === 0 ? "left" : "right",
+      delay: index * 150,
+      duration: 1000,
+    });
+  });
+
+  // ==== Paid Tariffs Section ====
+  const tarifs = document.querySelectorAll(".paid__tarifs-list-item");
+  tarifs.forEach((card, index) => {
+    const groupIndex = Math.floor(index / 2);
+    const origin = groupIndex % 2 === 0 ? "left" : "right";
+    sr.reveal(card, {
+      origin: origin,
+      delay: index * 100,
+      duration: 1000,
+    });
+  });
+
+ // ==== Domofon & IPTV Sections ====
+document.querySelectorAll(".domofon, .iptv").forEach((article, index) => {
+  sr.reveal(article, {
+    origin: index % 2 === 0 ? "left" : "right",
+    delay: index * 150,
+    duration: 1000,
+  });
+});
+
+  // ==== Paid Methods Section ====
+  sr.reveal(".paid__methods-title, .dropdown-list--decoration", {
+    origin: "bottom",
+    interval: 200,
+    duration: 1000,
+  });
+
+  // ==== Information Section ====
+  sr.reveal(".information__text, .information__map", {
+    origin: "bottom",
+    interval: 200,
+    duration: 1000,
+  });
+
+  // ==== Feedback Section ====
+  sr.reveal(".feedback__title, .feedback__subtitle, .feedback__form", {
+    origin: "bottom",
+    interval: 200,
+    duration: 1000,
+  });
+
+  // ==== FAQ Section ====
+  sr.reveal(".faq__title, .dropdown-list--decoration", {
+    origin: "bottom",
+    interval: 200,
+    duration: 1000,
+  });
+
+  // ==== Footer ====
+  sr.reveal(".footer__information-logo, .footer__contact, .footer__documents", {
+    origin: "bottom",
+    interval: 200,
+    duration: 1000,
+  });
+});
 
 // // //  Конец
 
@@ -301,6 +364,8 @@ window.addEventListener('resize', () => {
     releaseFocus();
   }
 });
+
+// Конец
 
 
 

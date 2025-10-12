@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Мегалайф — профессиональная установка и обслуживание IP-домофонов, видеонаблюдения, систем контроля доступа и кабельного телевидения в Симферополе. Безопасность вашего дома и бизнеса под ключ."
+    />
+    <meta
+      name="keywords"
+      content="Мегалайф, видеонаблюдение, IP-домофоны, СКУД, кабельное ТВ, Симферополь, системы безопасности"
+    />
+    <meta name="author" content="ООО Мегалайф" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:title"
+      content="Мегалайф — Системы безопасности в Симферополе"
+    />
+    <meta
+      property="og:description"
+      content="Профессиональная установка и обслуживание IP-домофонов, видеонаблюдения и СКУД."
+    />
+    <meta property="og:image" content="./images/heroblockimg.png" />
+    <meta property="og:type" content="website" />
+    <title>Мегалайф</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images/favicon16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      type="image/png"
+      sizes="180x180"
+      href="./images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./images/favicon-mobile.png"
+    />
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./styles/variables.css" />
+    <link rel="stylesheet" href="./styles/globals.css" />
+    <link rel="stylesheet" href="./styles/components.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/animations.css" />
+  </head>
+
+  <body class="page" id="page">
+    <div class="scrollProgress" id="scrollProgress"></div>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__logo">
+          <a class="header__logo-link" href="#page">
+            <img
+              class="header__logo-link-image"
+              src="./images/logo.svg"
+              alt="Мегалайф"
+            />
+            <p class="header__logo-link-text">Megalife</p>
+          </a>
+        </div>
+        <button class="burger" aria-label="Меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav class="header__navigation">
+        <ul class="header__navigation-list">
+          <li class="header__navigation-list-item">
+            <a class="header__navigation-list-item-link" href="#video"
+              >Видеонаблюдение</a
+            >
+          </li>
+          <li class="header__navigation-list-item">
+            <a class="header__navigation-list-item-link" href="#skyd">СКУД</a>
+          </li>
+          <li class="header__navigation-list-item">
+            <a class="header__navigation-list-item-link" href="#domofon"
+              >IP-Домофония</a
+            >
+          </li>
+          <li class="header__navigation-list-item">
+            <a class="header__navigation-list-item-link" href="#ip-tv"
+              >Кабельное ТВ</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="header__contact">
+        <address class="header__contact-block">
+          <span class="header__contact-block-title">Техподдержка</span>
+          <a class="header__contact-block-telephone" href="tel:+79782001515"
+            >+7 978 200-15-15</a
+          >
+        </address>
+        <button
+          class="header__contact-button button--red"
+          data-feedback
+          type="button"
+        >
+          Оставить заявку
+        </button>
+      </div>
+    </header>
+    <main class="main">
+      <section class="hero" id="hero">
+        <h1 class="hero__title">безопасность вашего дома и бизнеса</h1>
+        <p class="hero__text">
+          Установка и обслуживание IP-домофонов, систем контроля доступа и
+          видеонаблюдения
+        </p>
+        <button
+          class="hero__button button--red"
+          aria-label="Оставить заявку"
+          data-feedback
+          type="button"
+        >
+          Оставить заявку
+        </button>
+      </section>
+      <section class="why-us">
+        <h2 class="why-us__title">почему выбирают нас</h2>
+        <ul class="why-us__list">
+          <li class="why-us__list-item why-us__item--proffesional">
+            <p>Профессиональная установка и обслуживание оборудования</p>
+          </li>
+          <li class="why-us__list-item why-us__item--fast">
+            <p>Оперативное решение вопросов</p>
+          </li>
+          <li class="why-us__list-item why-us__item--experience">
+            <p>Опыт и использование проверенных решений</p>
+          </li>
+          <li class="why-us__list-item why-us__item--individual">
+            <p>Индивидуальный подход к каждому клиенту</p>
+          </li>
+          <li class="why-us__list-item why-us__item--time">
+            <p>Ценим каждого клиента и его время</p>
+          </li>
+        </ul>
+      </section>
+      <section class="service">
+        <div class="service__information-container">
+          <h2 class="service__information-container-title">наши услуги</h2>
+          <p class="service__information-container-text">
+            Комплекс услуг по установке и обслуживанию систем безопасности:
+            домофоны, контроль доступа на территорию, видеонаблюдение - под
+            ключ!
+          </p>
+        </div>
+        <article class="surveillance" id="video">
+          <div class="surveillance-container">
+            <h3 class="surveillance__header">Видеонаблюдение</h3>
+            <p class="surveillance__text">
+              Доступный способ получение адекватной оценки текущей ситуации на
+              объекте и эффективный психологический фактор для сдерживания
+              возможных правонарушений
+            </p>
+            <ul class="surveillance__list">
+              <li class="surveillance__list-item">
+                простота управления и сохранение видеофрагментов
+              </li>
+              <li class="surveillance__list-item">
+                доступ в режиме online из любой точки мира 24/7
+              </li>
+              <li class="surveillance__list-item">
+                просмотр с компьютера или смартфона
+              </li>
+              <li class="surveillance__list-item">
+                удаленное хранение видеоматериалов
+              </li>
+            </ul>
+            <button
+              class="surveillance__button button--red"
+              data-feedback
+              type="button"
+            >
+              Оставить заявку
+            </button>
+          </div>
+          <img
+            class="surveillance__image"
+            src="./images/Camera.png"
+            alt="Видеонаблюдение"
+            loading="lazy"
+          />
+        </article>
+
+        <article class="control" id="skyd">
+          <div class="control__information">
+            <h3 class="control__information-header">
+              система контроля и управления доступом
+            </h3>
+            <p class="control__information-text">
+              Недопущения незаконных парковок автотранспортных средств
+              неустановленными лицами
+            </p>
+            <ul class="control__information-list">
+              <li class="control__information-list-item">
+                управляемое получение доступа только заказчиком и его
+                представителям
+              </li>
+              <li class="control__information-list-item">
+                открытие через мобильное приложение на Вашем смартфоне по
+                созданному индивидуальному аккаунту клиента
+              </li>
+              <li class="control__information-list-item">
+                открытие пультом или брелком защищенными от копирования, с
+                возможностью удаленной блокировки при утере
+              </li>
+              <li class="control__information-list-item">
+                мониторинг въезда 24/7
+              </li>
+              <li class="control__information-list-item">
+                организация беспрепятственного доступа для спецтранспорта
+              </li>
+            </ul>
+            <button
+              class="control__button button--white"
+              data-feedback
+              type="button"
+            >
+              Оставить заявку
+            </button>
+          </div>
+        </article>
+
+        <article class="domofon" id="domofon">
+          <div class="domofon-container">
+            <h3 class="domofon__header">ip-домофония</h3>
+            <p class="domofon__text">
+              Удобная система открытия дверей Вашего дома или офиса заказчиком и
+              его гостями
+            </p>
+            <ul class="domofon__list">
+              <li class="domofon__list-item">открытие ключ-брелком</li>
+              <li class="domofon__list-item">
+                ключ-брелок защищен от копирования, с возможностью удаленной
+                блокировки при утере
+              </li>
+              <li class="domofon__list-item">
+                открытие через мобильное приложение с дополнительной функцией
+                распознавания лица и возможностью использования приложения
+                вместо домофонной трубки или домашнего видеодомофона
+              </li>
+              <li class="domofon__list-item">
+                использование приложения возможно из любой точки мира с
+                фотофиксацией гостей и предоставления доступа близким по
+                приглашению
+              </li>
+              <li class="domofon__list-item">
+                установка аудиотрубок и видеодомофонов
+              </li>
+              <li class="domofon__list-item">
+                мониторинг домофонного оборудования 24/7
+              </li>
+            </ul>
+            <button
+              class="domofon__button button--red"
+              data-feedback
+              type="button"
+            >
+              Оставить заявку
+            </button>
+          </div>
+          <img
+            class="domofon__image"
+            src="./images/domofon.png"
+            alt="Домофон"
+            loading="lazy"
+          />
+        </article>
+
+        <article class="iptv" id="ip-tv">
+          <div class="iptv__information">
+            <h3 class="iptv__information-header">кабельное телевидение</h3>
+            <p class="iptv__information-text">
+              Широкий выбор тематических каналов детские, развлекательные,
+              новостные и спортивные
+            </p>
+            <ul class="iptv__information-list">
+              <li class="iptv__information-list-item">
+                стабильный сигнал без помех в любую погоду
+              </li>
+              <li class="iptv__information-list-item">
+                качественно передаваемый сигнал, четкость картинки и звука
+              </li>
+              <li class="iptv__information-list-item">
+                до 130 каналов в HD качестве
+              </li>
+              <li class="iptv__information-list-item">
+                подключение нескольких телевизоров к одному кабелю
+              </li>
+            </ul>
+            <button
+              class="iptv__button button--white"
+              data-feedback
+              type="button"
+            >
+              Оставить заявку
+            </button>
+          </div>
+        </article>
+      </section>
+      <section class="paid">
+        <h2 class="paid__title">Тарифы</h2>
+        <ul class="paid__tarifs-list">
+          <li class="paid__tarifs-list-item tarifs-standart">
+            <article class="paid__tarifs-card">
+              <div class="paid__tarifs-card-title tarifs-card-title-standart">
+                <h3 class="paid__tarifs-card-title-title">Стандартный</h3>
+                <p class="paid__tarifs-card-price">299₽ мес / кв</p>
+              </div>
+              <ul
+                class="paid__tarifs-card-list paid__tarifs-card-list-standart"
+              >
+                <li class="paid__tarifs-card-list-item marker-decoration-check">
+                  Обслуживание IP-домофонии
+                </li>
+                <li class="paid__tarifs-card-list-item marker-decoration-check">
+                  Обслуживание систем контроля доступа (въезда) на территорию
+                  объекта
+                </li>
+                <li class="paid__tarifs-card-list-item marker-decoration-check">
+                  Обслуживание телематического оборудования по предоставлению
+                  услуг видеонаблюдения, удаленного доступа к видеонаблюдению и
+                  архиву видеозаписи с камер наблюдения
+                </li>
+              </ul>
+            </article>
+          </li>
+          <li class="paid__tarifs-list-item tarifs-pro">
+            <article class="paid__tarifs-card red-stars">
+              <div class="paid__tarifs-card-title tarifs-card-title-pro">
+                <h3 class="paid__tarifs-card-title-title tarifs-card-title-pro">
+                  Продвинутый
+                </h3>
+                <p>499₽ мес / кв</p>
+              </div>
+              <ul class="paid__tarifs-card-list paid__tarifs-card-list-pro">
+                <li class="paid__tarifs-card-list-item marker-decoration-check">
+                  Обслуживание IP-домофонии
+                </li>
+                <li class="paid__tarifs-card-list-item marker-decoration-check">
+                  Обслуживание систем контроля доступа (въезда) на территорию
+                  объекта
+                </li>
+                <li class="paid__tarifs-card-list-item marker-decoration-check">
+                  Обслуживание телематического оборудования по предоставлению
+                  услуг видеонаблюдения, удаленного доступа к видеонаблюдению и
+                  архиву видеозаписи с камер наблюдения
+                </li>
+                <li class="paid__tarifs-card-list-item marker-decoration-check">
+                  Кабельное телевидение
+                </li>
+              </ul>
+            </article>
+          </li>
+          <li class="paid__tarifs-list-item paid__tarifs--tv">
+            <article class="paid__tarifs-card">
+              <div class="paid__tarifs-card-title paid__tarifs-card-title-tv">
+                <h3 class="paid__tarifs-card-title-title">
+                  Кабельное телевидение
+                </h3>
+                <p class="paid__tarifs-card-price">250₽ мес / кв</p>
+              </div>
+              <ul class="paid__tarifs-card-list">
+                <li class="paid__tarifs-card-list-item marker-decoration-check">
+                  До 130 каналов в HD качестве
+                </li>
+              </ul>
+            </article>
+          </li>
+          <li class="paid__tarifs-list-item-button">
+            <button
+              class="tarifs-button button--red"
+              data-feedback
+              type="button"
+            >
+              Оставить заявку
+            </button>
+          </li>
+        </ul>
+      </section>
+      <section class="paid__methods">
+        <h2 class="paid__methods-title">Способы оплаты</h2>
+        <ul class="dropdown-list">
+          <li class="dropdown-list--decoration">
+            <div class="dropdown-list-item" onclick="toggleDropdown(this)">
+              <span>Оплата PayBerry</span>
+              <button
+                class="dropdown-list-item-button dropdown-button-red"
+                aria-label="Открыть инструкцию оплаты PayBerry"
+              ></button>
+            </div>
+            <div class="dropdown">
+              <ul class="dropdown-text">
+                <li class="marker-decoration">
+                  Перейдите по
+                  <a
+                    class="dropdown-text-link"
+                    href="payberry.ru/pay/5959"
+                    target="_blank"
+                    >ссылке</a
+                  >.
+                </li>
+                <li class="marker-decoration">
+                  Введите номер лицевого счета и действуйте согласно подсказкам
+                  на сайте.
+                </li>
+                <li>Ваш платеж успешно совершен!</li>
+              </ul>
+            </div>
+          </li>
+          <li class="dropdown-list--decoration">
+            <div class="dropdown-list-item" onclick="toggleDropdown(this)">
+              <span>Оплата ВТБ</span>
+              <button
+                class="dropdown-list-item-button dropdown-button-red"
+                aria-label="Открыть инструкцию оплаты ВТБ"
+              ></button>
+            </div>
+            <div class="dropdown">
+              <ul class="dropdown-text">
+                <li class="marker-decoration">
+                  В категории «ИНТЕРНЕТи TV» выберите «Мегалайф»
+                </li>
+                <li class="marker-decoration">
+                  Заполните поля «Идентификатор плательщика» (это номер Вашего
+                  договора — лицевого счета)
+                </li>
+                <li class="marker-decoration">
+                  Заполните поля «Период оплаты» (заполнение этих полей —
+                  требование банка, независимо от выбранных дат деньги будут
+                  зачислены на лицевой счет)
+                </li>
+                <li class="marker-decoration">
+                  Укажите сумму платежа, выбрав карту с которой будут списаны
+                  денежные средства, и подтвердите операцию кодом из СМС.
+                </li>
+                <li>Ваш платеж успешно совершен!</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <p class="paid__methods-text">
+          Возможно оформление рассрочки в индивидуальном порядке!
+        </p>
+      </section>
+      <section class="information">
+        <div class="information__map">
+          <iframe
+            title="Карта"
+            data-src="https://yandex.ru/map-widget/v1/?um=constructor%3A02f248f26ef41e8fff6e5e590913915aaf19cb1722cd089f22d5505d8cf2be13&amp;source=constructor"
+            height="565"
+            style="width: 100%; border: 0"
+            loading="lazy"
+          ></iframe>
+        </div>
+        <div class="information__text">
+          <img
+            class="information__text-logo"
+            src="./images/logowithtext.svg"
+            alt="Мегалайф"
+            loading="lazy"
+          />
+          <h2 class="information__text-title">Контакты</h2>
+          <address>
+            <ul class="information__text-address-list">
+              <li class="information__text-address-list-item">
+                <a
+                  class="information__text-address-list-item-decoration"
+                  href="https://vk.com/megalifecrimea"
+                  target="_blank"
+                  >ВКонтакте</a
+                >
+              </li>
+              <li class="information__text-address-list-item">
+                <a
+                  class="information__text-address-list-item-decoration"
+                  href="tel:+79782001515"
+                  >+7 978 200-15-15</a
+                >
+              </li>
+              <li class="information__text-address-list-item">
+                <a
+                  class="information__text-address-list-item-decoration"
+                  href="mailto:admin@crimea.mega-life.ru"
+                  >admin@crimea.mega-life.ru</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
+      </section>
+      <section class="feedback" id="feedback">
+        <h2 class="feedback__title">Обратная связь</h2>
+        <p class="feedback__subtitle">
+          Оставьте заявку и мы перезвоним вам в ближайшее время
+        </p>
+        <form action="#" class="feedback__form" novalidate>
+          <div class="feedback__form-input">
+            <input
+              type="text"
+              name="FIO"
+              class="feedback__input"
+              placeholder="Ваше имя"
+              required
+              maxlength="35"
+            />
+            <input
+              type="tel"
+              class="feedback__input"
+              name="telephone"
+              required
+              id="phone"
+              placeholder="+7 (___) ___-__-__"
+              maxlength="18"
+            />
+            <textarea
+              class="feedback__textarea"
+              name="message"
+              placeholder="Сообщение"
+              maxlength="1000"
+            ></textarea>
+          </div>
+          <div class="feedback__actions">
+            <button type="submit" class="feedback__button button--red">
+              Отправить
+            </button>
+            <span class="feedback__actions-text">
+              Нажимая, вы соглашаетесь с
+              <a
+                class="feedback__text-decoration"
+                href="./file/Политика+обработки+и+защиты+ПД+ООО+Мегалаиф.pdf"
+                target="_blank"
+                >правилами передачи данных и политикой конфиденциальности</a
+              >
+            </span>
+          </div>
+        </form>
+      </section>
+      <section class="faq">
+        <h2 class="faq__title">часто задаваемые вопросы</h2>
+        <ul class="dropdown-list">
+          <li class="dropdown-list--decoration">
+            <div class="dropdown-list-item" onclick="toggleDropdown(this)">
+              <span>Сколько лет компания работает на рынке?</span>
+              <button
+                class="dropdown-list-item-button dropdown-button-red"
+                aria-label="Открыть список FAQ"
+              ></button>
+            </div>
+            <div class="dropdown">
+              <ul class="dropdown-text">
+                <li class="marker-decoration">
+                  Мы успешно работаем с 2022 года, постоянно развиваясь и
+                  внедряя современные решения в сфере безопасности и комфорта
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="dropdown-list--decoration">
+            <div class="dropdown-list-item" onclick="toggleDropdown(this)">
+              <span
+                >Какие технологии и бренды оборудования вы используете?</span
+              >
+              <button
+                aria-label="Открыть список FAQ"
+                class="dropdown-list-item-button dropdown-button-red"
+              ></button>
+            </div>
+            <div class="dropdown">
+              <ul class="dropdown-text">
+                <li>Мы работаем с проверенными и надежными системами:</li>
+                <li class="marker-decoration">
+                  Rubetek — современные домофонные системы с возможностью
+                  автоматизация бытовых процессов (умный дом)
+                </li>
+                <li class="marker-decoration">
+                  Alutech — широкий ассортимент промышленных и коммерческих
+                  устройств СКУД
+                </li>
+                <li class="marker-decoration">
+                  HiWatch — камеры высокого качества с широким углом обзора и
+                  возможностью записи видео
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="dropdown-list--decoration">
+            <div class="dropdown-list-item" onclick="toggleDropdown(this)">
+              <span>В каких городах/регионах вы работаете?</span>
+              <button
+                class="dropdown-list-item-button dropdown-button-red"
+                aria-label="Открыть список FAQ"
+              ></button>
+            </div>
+            <div class="dropdown">
+              <ul class="dropdown-text">
+                <li class="marker-decoration">
+                  Наша компания оказывает услуги в селе Мирное, Симферопольский
+                  район, в жилом комплексе Жигулина Роща.
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="dropdown-list--decoration">
+            <div class="dropdown-list-item" onclick="toggleDropdown(this)">
+              <span>Как проходит процесс покупки/оформления услуги?</span>
+              <button
+                class="dropdown-list-item-button dropdown-button-red"
+                aria-label="Открыть список FAQ"
+              ></button>
+            </div>
+            <div class="dropdown">
+              <ul class="dropdown-text">
+                <li>Мы выстроили понятный и прозрачный процесс:</li>
+                <li class="marker-decoration">Подача заявки клиентом;</li>
+                <li class="marker-decoration">
+                  Подготовка коммерческого предложения с учетом пожеланий
+                  клиента;
+                </li>
+                <li class="marker-decoration">
+                  Проведение ОСС (Общего собрания собственников) в случае
+                  предоставления услуг в МКД;
+                </li>
+                <li class="marker-decoration">
+                  Заключение договора обслуживания.
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="dropdown-list--decoration">
+            <div class="dropdown-list-item" onclick="toggleDropdown(this)">
+              <span>Как воспользоваться приложением Rubetek Home?</span>
+              <button
+                class="dropdown-list-item-button dropdown-button-red"
+                aria-label="Открыть список FAQ"
+              ></button>
+            </div>
+            <div class="dropdown">
+              <ul class="dropdown-text">
+                <li class="marker-decoration">
+                  Скачать приложение "Rubetek Home" , выбрав ссылку согласно
+                  операционной системы Вашего смартфона -
+                  <a
+                    class="dropdown-text-link"
+                    href="https://apps.rustore.ru/app/com.rubetek.client"
+                    target="_blank"
+                    >Android</a
+                  >
+                  и
+                  <a
+                    class="dropdown-text-link"
+                    href="https://apps.apple.com/ru/app/rubetek-home/id1510751860"
+                    target="_blank"
+                    >iOS</a
+                  >
+                </li>
+                <li>
+                  (на ОС Android приложение возможно скачать только через
+                  каталог Rustore, пройдите по ссылке и выберите "Скачать через
+                  Rustore)
+                </li>
+                <li class="marker-decoration">
+                  Одобрить запрашиваемые разрешения.
+                </li>
+                <li class="marker-decoration">
+                  Кликнуть - начать пользоваться.
+                </li>
+                <li class="marker-decoration">Ввести номер телефона.</li>
+                <li class="marker-decoration">Ввести проверочный код.</li>
+                <li class="marker-decoration">
+                  Кликнуть на значок КАМЕРА, на экране выбрать объект для
+                  удаленного открытия и нажать на значок ЗАМОК
+                </li>
+                <li class="marker-decoration">
+                  Более подробная инструкция по
+                  <a
+                    class="dropdown-text-link"
+                    href="https://911911.org/doc?id=1130"
+                    target="_blank"
+                    >ссылке</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="dropdown-list--decoration">
+            <div class="dropdown-list-item" onclick="toggleDropdown(this)">
+              <span
+                >Почему после авторизации в приложении Rubetek Home нет
+                адреса?</span
+              >
+              <button
+                class="dropdown-list-item-button dropdown-button-red"
+                aria-label="Открыть список FAQ"
+              ></button>
+            </div>
+            <div class="dropdown">
+              <ul class="dropdown-text">
+                <li class="marker-decoration">Вы не являетесь клиентом.</li>
+                <li class="marker-decoration">
+                  При авторизации Вы указали неверный клиентский номер телефона,
+                  для обновления данных необходимо оставить заявку, указав ФИО,
+                  адрес по которому Вы получаете услугу, актуальный номер
+                  телефона.
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="dropdown-list--decoration">
+            <div class="dropdown-list-item" onclick="toggleDropdown(this)">
+              <span>Через какое приложение просматривать видеоматериалы?</span>
+              <button
+                class="dropdown-list-item-button dropdown-button-red"
+                aria-label="Открыть список FAQ"
+              ></button>
+            </div>
+            <div class="dropdown">
+              <ul class="dropdown-text">
+                <li class="marker-decoration">Приложение Flussonic Watcher</li>
+                <li class="marker-decoration">
+                  <a
+                    class="dropdown-text-link"
+                    href="https://watcher.fishka.ws/"
+                    target="_blank"
+                    >Веб-приложение</a
+                  >
+                </li>
+                <li class="marker-decoration">
+                  Мобильное приложение можно скачать по ссылкам:
+                  <a
+                    class="dropdown-text-link"
+                    href="https://play.google.com/store/apps/details?id=com.flussonic.watcher"
+                    target="_blank"
+                    >Android</a
+                  >
+                  и
+                  <a
+                    class="dropdown-text-link"
+                    href="https://apps.apple.com/ru/app/flussonic-watcher/id1233594294"
+                    target="_blank"
+                    >IOS</a
+                  >
+                </li>
+                <li class="marker-decoration">
+                  Для доступа необходимо ввести логин и пароль полученные при
+                  заказе услуги
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__information-logo">
+        <img
+          class="footer__information-logo-image"
+          src="./images/logo.svg"
+          alt="Мегалайф"
+          loading="lazy"
+        />
+        <p class="footer__information-logo-text-title">megalife</p>
+      </div>
+      <address class="footer__contact">
+        <ul class="footer__contact-list">
+          <li>
+            <a class="footer__contact-list-links" href="tel:+79782001515"
+              >+7 978 200-15-15</a
+            >
+          </li>
+          <li>
+            <a
+              class="footer__contact-list-links"
+              href="mailto:admin@crimea.mega-life.ru"
+              >admin@crimea.mega-life.ru</a
+            >
+          </li>
+          <li>
+            <a
+              class="footer__contact-list-links"
+              href="https://vk.com/megalifecrimea"
+              target="_blank"
+              >ВКонтакте</a
+            >
+          </li>
+        </ul>
+      </address>
+      <div class="footer__documents">
+        <ul class="footer__documents-list">
+          <li class="footer__documents-list-item">
+            <a
+              class="icon-pdf footer__documents-list-item-docs"
+              href="./file/Лицензия_Телематические_услуги_связи.pdf"
+              target="_blank"
+              >Лицензия - Телематические услугисвязи</a
+            >
+          </li>
+          <li class="footer__documents-list-item">
+            <a
+              class="icon-pdf footer__documents-list-item-docs"
+              href="./file/Лицензия_Услуги_связи_по_предоставлению_каналов_связи.pdf"
+              target="_blank"
+              >Лицензия - Услуги связи по предоставлению каналов связи</a
+            >
+          </li>
+          <li class="footer__documents-list-item">
+            <a
+              class="icon-pdf footer__documents-list-item-docs"
+              href="./file/Лицензия_Услуги_связи_по_передаче_данных,_за_исключением_услуг_связи.pdf"
+              target="_blank"
+              >Лицензия - Услуги связи по передаче данных, за исключением услуг
+              связи</a
+            >
+          </li>
+          <li class="footer__documents-list-item">
+            <a
+              class="icon-pdf footer__documents-list-item-docs"
+              href="./file/Политика+обработки+и+защиты+ПД+ООО+Мегалаиф.pdf"
+              target="_blank"
+              >Политика обработки и защиты ПД ООО Мегалайф</a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="./javascript/scrollreveal.min.js" defer></script>
+    <script src="./main.js" defer></script>
+    <dialog class="submitted-window" id="submitted__window">
+      <div class="submitted-window__content">
+        <img
+          class="submitted-window__content-image"
+          aria-hidden="true"
+          aria-label="Логотип компании Мегалайф"
+          src="./images/logowithtext.svg"
+          alt="Мегалайф"
+          loading="lazy"
+        />
+        <p>
+          <span class="submitted-window__content-message">Спасибо!</span><br />
+          Ваша заявка отправлена, мы скоро с вами свяжемся
+        </p>
+        <button
+          class="submitted-window__content-button"
+          type="button"
+          onclick="window.submitted__window.close()"
+        >
+          <span class="button__text">Закрыть</span>
+        </button>
+      </div>
+    </dialog>
+    <div class="mobile-overlay"></div>
+    <nav class="mobile-menu">
+      <div class="mobile-menu-inner">
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__list-item"><a class="mobile-menu__list-link" href="#video">Видеонаблюдение</a></li>
+          <li class="mobile-menu__list-item"><a class="mobile-menu__list-link" href="#skyd">СКУД</a></li>
+          <li class="mobile-menu__list-item"><a class="mobile-menu__list-link" href="#domofon">IP-Домофония</a></li>
+          <li class="mobile-menu__list-item"><a class="mobile-menu__list-link" href="#ip-tv">Кабельное ТВ</a></li>
+        </ul>
+        <div class="mobile-menu__footer">
+          <address class="mobile-menu__footer-address">
+            <span class="mobile-menu__footer-address-text">Техподдержка</span>
+            <a class="mobile-menu__footer-address-number" href="tel:+79782001515">+7 978 200-15-15</a>
+          </address>
+          <button class="mobile-menu__footer-button button--red" data-feedback
+          type="button">Оставить заявку</button>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>
+

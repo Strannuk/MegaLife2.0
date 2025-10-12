@@ -1,0 +1,389 @@
+/* Стилизация маркера для списка - маркер красная галочка */
+
+.marker-decoration-check {
+  position: relative;
+  padding-left: 50px;
+}
+
+.marker-decoration-check::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  width: 10px;
+  height: 25px;
+  border-right: 2px solid var(--border-main-color, #ed1c24);
+  border-bottom: 2px solid var(--border-main-color, #ed1c24);
+  transform: translateY(-80%) rotate(45deg);
+}
+
+.marker-decoration-check::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+/* Конец  */
+
+/* PDF Иконка */
+
+.icon-pdf {
+  position: relative;
+  display: inline-block;
+}
+
+.icon-pdf::before {
+  content: "PDF";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border: 1.5px solid var(--white-accent-color, #fff);
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 8px;
+  transform: translateY(-50%);
+}
+
+/* Конец */
+
+/* Кнопка для выпадающего списка красная на белом фоне */
+
+.dropdown-button-red {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: var(--main-background-color, #fff);
+}
+
+.dropdown-button-red::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid var(--border-main-color, #ed1c24);
+  border-left: 2px solid var(--border-main-color, #ed1c24);
+  transition: transform 0.3s ease;
+  transform: rotate(-45deg);
+}
+
+.dropdown-list--decoration.open .dropdown-button-red::after {
+  transform: rotate(135deg);
+}
+
+/* Конец */
+
+/* Красная звезда над кнопкой */
+
+.red-stars {
+  position: relative;
+}
+
+.red-stars::before {
+  content: "★";
+  position: absolute;
+  top: 152%;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 63px;
+  height: 63px;
+  border: 2px solid var(--border-main-color, #ed1c24);
+  border-radius: 50%;
+  color: var(--accent-text-color, #ed1c24);
+  font-size: 40px;
+  background-color: var(--main-background-color, #fff);
+  transform: translateX(-50%);
+}
+
+/* Конец */
+
+/* Скролл прогресс бар */
+
+#scrollProgress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 0%;
+  height: 5px;
+  background: var(
+    --button-color-type-red,
+    linear-gradient(92deg, #ed1c24 0%, #ed3f1c 100%)
+  );
+  transition: width 0.1s ease-out;
+}
+
+/* Конец */
+
+/* Ошибка  */
+
+.error {
+  border-color: #f23131;
+  box-shadow: 0 0 0 4px rgba(242, 49, 49, 0.4);
+}
+
+.error-message {
+  margin-top: 8px;
+  color: #f23131;
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* Конец */
+
+/* Модальное окно при отправке заявки */
+
+.submitted-window[open] {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  border: 2px solid red;
+  border-radius: 16px;
+  padding: 50px;
+  transform: translate(-50%, -50%);
+}
+
+.submitted-window::backdrop {
+  opacity: 0.75;
+  background-color: black;
+}
+
+.submitted-window__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  text-align: center;
+}
+
+.submitted-window__content-message {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@media (width <=767px) {
+  .submitted-window[open] {
+    width: 75%;
+    padding: 25px;
+  }
+}
+
+/* Конец */
+
+
+/* Маркер красная точка */
+
+.surveillance__list-item::before,
+.domofon__list-item::before  {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 4px;
+  height: 4px;
+  background-color: red; /* цвет точки */
+  border-radius: 50%;
+  transform: translateY(-50%);
+  margin-inline-start: 4px;
+}
+
+/* Маркер белая точка */
+
+.control__information-list-item::before,
+.iptv__information-list-item::before {
+ content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 4px;
+  height: 4px;
+  background-color: white; /* цвет точки */
+  border-radius: 50%;
+  transform: translateY(-50%);
+  margin-inline-start: 4px;
+}
+
+/* Маркер черная точка */
+.marker-decoration {
+  position: relative;
+  padding-left: 15px;
+}
+
+.marker-decoration::before {
+ content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 4px;
+  height: 4px;
+  background-color: black; /* цвет точки */
+  border-radius: 50%;
+  transform: translateY(-50%);
+  margin-inline-start: 4px;
+}
+
+/* Конец */
+
+
+/* Красная кнопка  */
+
+.button--red {
+  color: var(--submain-text-color, #fff);
+  background-color: var(--main-button-color, #ed0e16);
+}
+
+/* Конец */
+
+/* Белая кнопка */
+
+
+.button--white {
+  color: var(--main-text-color, #2d313c);
+  background-color: var(--main-background-color, #fff);
+  position: absolute;
+  bottom: 0;
+  border-radius: 8px 8px 0 0;
+  border-bottom: 1px solid var(--main-text-color, #2d313c);
+  padding: 18px 44px;
+}
+
+/* Конец */
+
+/* Бургер */
+.burger {
+  width: 20px;
+  height: 16px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 21;
+}
+
+.burger span {
+  height: 2px;
+  width: 100%;
+  background: #2D313C;
+  border-radius: 555px;
+  transition: 0.3s;
+}
+
+.burger.active span:nth-child(1) {
+  transform: translateY(5px) rotate(45deg);
+}
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+.burger.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Конец */
+
+/* Мобильное меню */
+.mobile-menu {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  display: none;
+  background: #fff;
+  border-radius: 0 0 16px 16px;
+  padding: 25px;
+  margin-inline:15px;
+  z-index: 10;
+  animation: slideDown 0.3s ease;
+}
+
+.mobile-menu-inner {
+  width: 100%;
+}
+
+.mobile-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap:15px;
+  padding-block: 7px 13px;
+}
+
+.mobile-menu__list-item {
+  border-bottom: 2px solid #DFE2E5;
+  padding-bottom: 15px;
+}
+
+.mobile-menu__list-link {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.mobile-menu__footer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.mobile-menu__footer-address {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+}
+
+.mobile-menu__footer-address-text {
+  font-size: 10px;
+}
+
+.mobile-menu__footer-address-number {
+  color: #ED0E16;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.mobile-menu__footer-button {
+  padding: 16px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  z-index: 5;
+}
+
+.header.menu-open {
+  border-radius: 0; 
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh; 
+}
+
+.mobile-menu.active,
+.mobile-overlay.active {
+  display: flex;
+}
+
+/* Конец */
+

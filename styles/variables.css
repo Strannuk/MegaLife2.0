@@ -1,11 +1,11 @@
-:root {
-  --Montserrat: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --main-text-color: #2D313C;
-  --submain-text-color: #fff;
-  --accent-text-color: #ED0E16;
-  --main-background-color: #fff;
-  --submain-background-color: #F1F4F8;
-  --accent-background-color: #2D313C;
-  --main-button-color: #ED0E16;
-  --accent-border-color: #ebebeb;
-}
+  :root {
+    --Montserrat: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --main-text-color: #2D313C;
+    --submain-text-color: #fff;
+    --accent-text-color: #ED0E16;
+    --main-background-color: #fff;
+    --submain-background-color: #F1F4F8;
+    --accent-background-color: #2D313C;
+    --main-button-color: #ED0E16;
+    --accent-border-color: #ebebeb;
+  }

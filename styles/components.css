@@ -259,7 +259,6 @@
   position: absolute;
   bottom: 0;
   border-radius: 8px 8px 0 0;
-  border-bottom: 1px solid var(--main-text-color, #2d313c);
   padding: 18px 44px;
 }
 

@@ -1,9 +1,12 @@
+
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Strannuk/MegaLife2.0/main/images/logowithtext.svg" alt="MegaLife logo" width="80%" style="border-radius:15px; box-shadow:0 0 20px #7f00ff;">
+  <img src="https://raw.githubusercontent.com/Strannuk/MegaLife2.0/main/images/banner.png" alt="MegaLife Banner" width="80%" style="border-radius:15px; box-shadow:0 0 20px #7f00ff;">
 </p>
 
 <h1 align="center">
-  🌌 MegaLife 2.0
+  <span style="background: linear-gradient(270deg,#7f00ff,#e100ff,#00fff7);background-size:600% 600%;-webkit-background-clip:text;color:transparent;animation: gradientMove 10s ease infinite;">
+    🌌 MegaLife 2.0
+  </span>
 </h1>
 
 <p align="center">
@@ -26,11 +29,19 @@
 | 🌟 Feature | 🔹 Benefit |
 |------------|------------|
 | 🎨 **Современный дизайн** | Минималистичный и футуристический |
-| ⚡ **Анимации** | Показаны через GIF-демо |
+| ⚡ **Анимации** | Плавные скроллы, hover-эффекты, модальные окна |
 | 📱 **Адаптивность** | Работает на любом устройстве |
 | 🔧 **Кастомизация** | CSS-переменные для изменения темы |
 | 🌐 **Совместимость** | Все современные браузеры |
 | 💻 **Быстрый старт** | Статический сайт — сервер не нужен |
+
+---
+
+## 🎬 Демо
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Strannuk/MegaLife2.0/main/images/demo.gif" alt="MegaLife Demo" width="80%" style="border-radius:15px;box-shadow:0 0 20px #00fff7">
+</p>
 
 ---
 
@@ -51,50 +62,73 @@
 git clone https://github.com/Strannuk/MegaLife2.0.git
 cd MegaLife2.0
 open index.html
+```
+
 Проект статический — сервер не нужен.
+
+---
 
 ## 📊 Услуги
 
-| 🎥 Видеонаблюдение | 🔐 Контроль доступа | 📺 Кабельное ТВ | ⚙️ Настройка сети |
-|-------------------|------------------|----------------|-----------------|
-| Слежение и запись видео | Управление доступом | ТВ и каналы | Настройка сети и оборудования |
+<p align="center"> 
+  <span style="display:inline-block;padding:12px 25px;margin:5px;background:linear-gradient(90deg,#7f00ff,#e100ff);color:white;border-radius:15px;transition:0.3s;cursor:pointer;">🎥 Видеонаблюдение</span> 
+  <span style="display:inline-block;padding:12px 25px;margin:5px;background:linear-gradient(90deg,#00ff95,#00cfff);color:white;border-radius:15px;transition:0.3s;cursor:pointer;">🔐 Контроль доступа</span> 
+  <span style="display:inline-block;padding:12px 25px;margin:5px;background:linear-gradient(90deg,#ff6a00,#ee0979);color:white;border-radius:15px;transition:0.3s;cursor:pointer;">📺 Кабельное ТВ</span> 
+  <span style="display:inline-block;padding:12px 25px;margin:5px;background:linear-gradient(90deg,#1f4037,#99f2c8);color:white;border-radius:15px;transition:0.3s;cursor:pointer;">⚙️ Настройка сети</span> 
+</p>
 
 ---
 
 ## 💡 FAQ
 
-<details>
-  <summary>❓ Нужен ли сервер?</summary>
-  Нет, проект полностью статический.
-</details>
+<details> 
+  <summary>❓ Нужен ли сервер?</summary> 
+  Нет, проект полностью статический. 
+</details> 
 
-<details>
-  <summary>❓ Можно ли менять дизайн?</summary>
-  Да, CSS-переменные позволяют менять цвета и темы.
-</details>
+<details> 
+  <summary>❓ Можно ли менять дизайн?</summary> 
+  Да, CSS-переменные позволяют менять цвета и темы. 
+</details> 
 
-<details>
-  <summary>❓ Работает ли на мобильных?</summary>
-  Полностью адаптивный, проверено на iOS, Android и десктопах.
-</details>
+<details> 
+  <summary>❓ Работает ли на мобильных?</summary> 
+  Полностью адаптивный, проверено на iOS, Android и десктопах. 
+</details> 
 
-<details>
-  <summary>❓ Можно ли добавлять новые секции?</summary>
-  Да, просто создайте HTML-блок и стилизуйте через CSS.
+<details> 
+  <summary>❓ Можно ли добавлять новые секции?</summary> 
+  Да, просто создайте HTML-блок и стилизуйте через CSS. 
 </details>
 
 ---
 
 ## 🌐 Контакты
 
-📞 +7 978 200-15-15  
-✉️ admin@crimea.mega-life.ru  
-🔗 [VK](https://vk.com)
+<p align="center"> 
+  📞 +7 978 200-15-15 &nbsp; | &nbsp; ✉️ admin@crimea.mega-life.ru &nbsp; | &nbsp; 🔗 <a href="https://vk.com">VK</a> 
+</p>
 
 ---
 
 ## 📄 Лицензия
 
-MIT License — свободное использование и модификация.  
+<p align="center"> 
+  MIT License — свободное использование и модификация. 
+</p> 
 
-Сделано с ❤️ и футуристическим стилем
+<p align="center"> 
+  Сделано с ❤️ и футуристическим стилем 
+</p>
+
+<style> 
+@keyframes gradientMove { 
+  0%{background-position:0% 50%} 
+  50%{background-position:100% 50%} 
+  100%{background-position:0% 50%} 
+} 
+span:hover { 
+  transform: translateY(-5px) scale(1.05); 
+  box-shadow: 0 0 20px rgba(0,255,255,0.5); 
+} 
+</style>

@@ -12,8 +12,8 @@ app.post('/send', async (req, res) => {
   console.log("Incoming data:", req.body);
 
   const { FIO, telephone, message } = req.body;
-  const telegramToken = ' '; // Токен 
-  const chatId = ' '; // Чат ID
+  const telegramToken = process.env.TELEGRAM_TOKEN; // Токен Замените данную строку на const telegramToken = 'Ваш Токен';
+  const chatId = process.env.CHAT_ID; // Чат ID Замените данную строку на const chatId = 'Ваш Chat ID';
 
   const text = `📩 Новая заявка!\n👤 Имя: ${FIO}\n📞 Телефон: ${telephone}\n💬 Сообщение: ${message}`;
 

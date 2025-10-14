@@ -103,6 +103,20 @@ document.querySelectorAll(".domofon, .iptv").forEach((article, index) => {
 
 // // //  Конец
 
+  // Кнопки "Оставить заявку" — скролл к секции #feedback
+document.querySelectorAll("[data-feedback]").forEach((btn) => {
+  btn.addEventListener("click", (ev) => {
+    ev.preventDefault();
+    const feedbackSection = document.getElementById("feedback");
+    if (!feedbackSection) return;
+    feedbackSection.scrollIntoView({ behavior: "smooth" });
+    const firstInput = feedbackSection.querySelector('input[name="FIO"], textarea, input');
+    if (firstInput) firstInput.focus({ preventScroll: true });
+  });
+});
+
+// Конец
+
 // // Выпадающий список
 
 function toggleDropdown(button) {

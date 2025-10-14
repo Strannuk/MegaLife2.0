@@ -260,7 +260,7 @@ window.addEventListener('resize', () => {
 
 // Конец
 
-// // Форма согласия обработки данных 
+// // // Форма согласия обработки данных 
 
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector(".feedback__form");
@@ -272,12 +272,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const messageInput = form.querySelector('textarea[name="message"]');
   const agreementCheckbox = form.querySelector('input[name="agreement"]');
 
-  // Модальное окно согласия
+  // Модальные окна
   const agreementDialog = document.getElementById("agreement-dialog");
   const acceptBtn = document.getElementById("accept-agreement");
   const declineBtn = document.getElementById("decline-agreement");
-
-  // Модальное окно отправки
   const submittedDialog = document.getElementById("submitted__window");
 
   // Контейнер для ошибок
@@ -327,12 +325,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Событие на чекбокс согласия
+  // Универсальная функция открытия модалки без прокрутки
+  function openDialog(dialog) {
+    if (dialog && typeof dialog.showModal === "function") {
+      dialog.showModal();
+      document.body.style.overflow = "hidden"; // Блокируем прокрутку
+
+      const onClose = () => {
+        document.body.style.overflow = ""; // Восстанавливаем прокрутку
+        dialog.removeEventListener("close", onClose);
+      };
+      dialog.addEventListener("close", onClose);
+    }
+  }
+
+  // События для модалки согласия
   if (agreementCheckbox && agreementDialog) {
     agreementCheckbox.addEventListener("change", function () {
       if (agreementCheckbox.checked) {
-        agreementDialog.showModal();
-        agreementCheckbox.checked = false;
+        openDialog(agreementDialog);
+        agreementCheckbox.checked = false; // галочка ставится только после подтверждения
       }
     });
 
@@ -395,15 +407,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const result = await res.json();
 
       if (result.success) {
-        if (submittedDialog && typeof submittedDialog.showModal === "function") {
-          submittedDialog.showModal();
-          document.body.style.overflow = "hidden";
-          submittedDialog.addEventListener("close", () => {
-            document.body.style.overflow = "";
-          });
-        } else {
-          alert("Заявка отправлена!");
-        }
+        // Открываем окно отправки через универсальную функцию
+        openDialog(submittedDialog);
         form.reset();
       } else {
         showError("Ошибка отправки: " + (result.error || "неизвестная ошибка"));
@@ -414,5 +419,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
 
 // Конец

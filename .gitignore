@@ -1,0 +1,11 @@
+# Папка с модулями Node
+node_modules/
+
+# Логи
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Системные файлы
+.DS_Store
+.env

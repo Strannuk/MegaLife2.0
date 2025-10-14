@@ -131,120 +131,6 @@ function toggleDropdown(button) {
 
 // // Конец
 
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector(".feedback__form");
-  if (!form) return;
-
-  const nameInput = form.querySelector('input[type="text"]');
-  const phoneInput = form.querySelector("#phone");
-  const messageInput = form.querySelector("textarea");
-  const agreementCheckbox = form.querySelector('input[name="agreement"]');
-
-  // Создаем отдельный контейнер для ошибок под textarea
-  let errorContainer = form.querySelector(".feedback-error-container");
-  if (!errorContainer) {
-    errorContainer = document.createElement("div");
-    errorContainer.className = "feedback-error-container";
-    messageInput.parentNode.insertBefore(errorContainer, messageInput.nextSibling);
-  }
-
-  function showError(text) {
-    errorContainer.textContent = text;
-    errorContainer.style.display = "block";
-  }
-
-  function clearError() {
-    errorContainer.textContent = "";
-    errorContainer.style.display = "none";
-  }
-
-  if (nameInput) {
-    nameInput.addEventListener("input", (e) => {
-      e.target.value = e.target.value.replace(/[^A-Za-zА-Яа-яЁё\s-]/g, "");
-    });
-    nameInput.addEventListener("paste", (e) => {
-      const pasted =
-        (e.clipboardData || window.clipboardData).getData("text") || "";
-      const cleaned = pasted.replace(/[^A-Za-zА-Яа-яЁё\s-]/g, "");
-      if (cleaned !== pasted) {
-        e.preventDefault();
-        document.execCommand("insertText", false, cleaned);
-      }
-    });
-  }
-
-  if (phoneInput) {
-    phoneInput.addEventListener("input", function (e) {
-      let digits = e.target.value.replace(/\D/g, "").slice(0, 11);
-      if (!digits.startsWith("7")) digits = ("7" + digits).slice(0, 11);
-      let formatted = "+" + (digits[0] || "7");
-      if (digits.length > 1) formatted += " (" + digits.slice(1, 4);
-      if (digits.length >= 4) formatted += ") " + digits.slice(4, 7);
-      if (digits.length >= 7) formatted += "-" + digits.slice(7, 9);
-      if (digits.length >= 9) formatted += "-" + digits.slice(9, 11);
-      e.target.value = formatted;
-    });
-  }
-
-  document.querySelectorAll("[data-feedback]").forEach((btn) => {
-    btn.addEventListener("click", (ev) => {
-      ev.preventDefault();
-      const feedbackSection = document.getElementById("feedback");
-      if (feedbackSection)
-        feedbackSection.scrollIntoView({ behavior: "smooth" });
-    });
-  });
-
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    clearError();
-
-    if (!nameInput || nameInput.value.trim().length < 2) {
-      showError("Введите имя (только буквы, минимум 2 символа)");
-      nameInput.focus();
-      return;
-    }
-
-    const digits = phoneInput ? phoneInput.value.replace(/\D/g, "") : "";
-    if (!phoneInput || digits.length !== 11) {
-      showError("Введите полный номер: +7 (XXX) XXX-XX-XX");
-      phoneInput.focus();
-      return;
-    }
-
-    if (!messageInput || messageInput.value.trim().length === 0) {
-      showError("Введите сообщение");
-      messageInput.focus();
-      return;
-    }
-
-    if (!agreementCheckbox || !agreementCheckbox.checked) {
-      showError("Необходимо согласие на обработку персональных данных");
-      agreementCheckbox.focus();
-      return;
-    }
-
-    const dialog = document.getElementById("submitted__window");
-    if (dialog && typeof dialog.showModal === "function") {
-      dialog.showModal();
-      document.body.style.overflow = "hidden";
-      const onClose = () => {
-        document.body.style.overflow = "";
-        dialog.removeEventListener("close", onClose);
-      };
-      dialog.addEventListener("close", onClose);
-    } else {
-      alert("Заявка отправлена!");
-    }
-
-    form.reset();
-    clearError();
-  });
-});
-
-
-//
-
 // // Скролл прогрес бар
 
 window.addEventListener("scroll", function () {
@@ -374,23 +260,78 @@ window.addEventListener('resize', () => {
 
 // Конец
 
-// Форма согласия обработки данных 
+// // Форма согласия обработки данных 
 
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector(".feedback__form");
   if (!form) return;
 
+  // Поля формы
+  const nameInput = form.querySelector('input[name="FIO"]');
+  const phoneInput = form.querySelector("#phone");
+  const messageInput = form.querySelector('textarea[name="message"]');
   const agreementCheckbox = form.querySelector('input[name="agreement"]');
+
+  // Модальное окно согласия
   const agreementDialog = document.getElementById("agreement-dialog");
   const acceptBtn = document.getElementById("accept-agreement");
   const declineBtn = document.getElementById("decline-agreement");
 
+  // Модальное окно отправки
+  const submittedDialog = document.getElementById("submitted__window");
+
+  // Контейнер для ошибок
+  let errorContainer = form.querySelector(".feedback-error-container");
+  if (!errorContainer) {
+    errorContainer = document.createElement("div");
+    errorContainer.className = "feedback-error-container";
+    messageInput.parentNode.insertBefore(errorContainer, messageInput.nextSibling);
+  }
+
+  function showError(text) {
+    errorContainer.textContent = text;
+    errorContainer.style.display = "block";
+  }
+
+  function clearError() {
+    errorContainer.textContent = "";
+    errorContainer.style.display = "none";
+  }
+
+  // Валидация имени (только буквы)
+  if (nameInput) {
+    nameInput.addEventListener("input", (e) => {
+      e.target.value = e.target.value.replace(/[^A-Za-zА-Яа-яЁё\s-]/g, "");
+    });
+    nameInput.addEventListener("paste", (e) => {
+      const pasted = (e.clipboardData || window.clipboardData).getData("text") || "";
+      const cleaned = pasted.replace(/[^A-Za-zА-Яа-яЁё\s-]/g, "");
+      if (cleaned !== pasted) {
+        e.preventDefault();
+        document.execCommand("insertText", false, cleaned);
+      }
+    });
+  }
+
+  // Форматирование телефона
+  if (phoneInput) {
+    phoneInput.addEventListener("input", function (e) {
+      let digits = e.target.value.replace(/\D/g, "").slice(0, 11);
+      if (!digits.startsWith("7")) digits = ("7" + digits).slice(0, 11);
+      let formatted = "+" + (digits[0] || "7");
+      if (digits.length > 1) formatted += " (" + digits.slice(1, 4);
+      if (digits.length >= 4) formatted += ") " + digits.slice(4, 7);
+      if (digits.length >= 7) formatted += "-" + digits.slice(7, 9);
+      if (digits.length >= 9) formatted += "-" + digits.slice(9, 11);
+      e.target.value = formatted;
+    });
+  }
+
+  // Событие на чекбокс согласия
   if (agreementCheckbox && agreementDialog) {
-    agreementCheckbox.addEventListener("change", function (e) {
+    agreementCheckbox.addEventListener("change", function () {
       if (agreementCheckbox.checked) {
-        // если пользователь пытается поставить галочку
         agreementDialog.showModal();
-        // отменяем отметку до подтверждения
         agreementCheckbox.checked = false;
       }
     });
@@ -405,6 +346,73 @@ document.addEventListener("DOMContentLoaded", () => {
       agreementDialog.close();
     });
   }
+
+  // Главный обработчик формы
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    clearError();
+
+    // Валидация
+    if (!nameInput || nameInput.value.trim().length < 2) {
+      showError("Введите имя (только буквы, минимум 2 символа)");
+      nameInput.focus();
+      return;
+    }
+
+    const digits = phoneInput ? phoneInput.value.replace(/\D/g, "") : "";
+    if (!phoneInput || digits.length !== 11) {
+      showError("Введите полный номер: +7 (XXX) XXX-XX-XX");
+      phoneInput.focus();
+      return;
+    }
+
+    if (!messageInput || messageInput.value.trim().length === 0) {
+      showError("Введите сообщение");
+      messageInput.focus();
+      return;
+    }
+
+    if (!agreementCheckbox || !agreementCheckbox.checked) {
+      showError("Необходимо согласие на обработку персональных данных");
+      agreementCheckbox.focus();
+      return;
+    }
+
+    // Данные для сервера
+    const data = {
+      FIO: nameInput.value.trim(),
+      telephone: phoneInput.value.trim(),
+      message: messageInput.value.trim()
+    };
+
+    try {
+      const res = await fetch("/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+
+      const result = await res.json();
+
+      if (result.success) {
+        if (submittedDialog && typeof submittedDialog.showModal === "function") {
+          submittedDialog.showModal();
+          document.body.style.overflow = "hidden";
+          submittedDialog.addEventListener("close", () => {
+            document.body.style.overflow = "";
+          });
+        } else {
+          alert("Заявка отправлена!");
+        }
+        form.reset();
+      } else {
+        showError("Ошибка отправки: " + (result.error || "неизвестная ошибка"));
+      }
+    } catch (err) {
+      console.error(err);
+      showError("Ошибка отправки: " + err.message);
+    }
+  });
 });
 
 // Конец

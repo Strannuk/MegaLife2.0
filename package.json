@@ -1,0 +1,26 @@
+{
+  "name": "megalifenew",
+  "version": "1.0.0",
+  "description": "<p align=\"center\">   <img src=\"https://raw.githubusercontent.com/Strannuk/MegaLife2.0/main/images/logowithtext.svg\" alt=\"MegaLife Banner\" width=\"40%\" style=\"border-radius:15px; box-shadow:0 0 20px #7f00ff;\"> </p>",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Strannuk/MegaLife2.0.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Strannuk/MegaLife2.0/issues"
+  },
+  "homepage": "https://github.com/Strannuk/MegaLife2.0#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "node-fetch": "^3.3.2"
+  }
+}

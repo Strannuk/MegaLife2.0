@@ -20,7 +20,9 @@
 
   .button--red,
   .button--white,
-  .hero__button {
+  .hero__button,
+  .agreement-buttons-disagree,
+  .agreement-buttons-agree {
     transition: 
       background-color 0.2s ease,
       color 0.2s ease,
@@ -121,4 +123,10 @@
   .feedback__textarea:focus-visible,
   .feedback__textarea:hover {
     outline: 2px solid var(--accent-text-color, #ED0E16);
+  }
+
+  .agreement-buttons-disagree:hover,
+  .agreement-buttons-disagree:focus-visible {
+    background-color: var(--main-button-color, #ED0E16);
+    color: var(--submain-text-color, #fff);
   }

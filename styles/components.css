@@ -133,16 +133,15 @@
 
 /* Ошибка  */
 
-.error {
-  border-color: #f23131;
-  box-shadow: 0 0 0 4px rgba(242, 49, 49, 0.4);
+.feedback-error-container {
+  color: red;
+  font-size: 14px;
+  animation: fadeIn 0.3s ease-in;
 }
 
-.error-message {
-  margin-top: 8px;
-  color: #f23131;
-  font-size: 18px;
-  line-height: 1;
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Конец */
@@ -387,3 +386,115 @@
 
 /* Конец */
 
+/* Чекбокс - красный */
+
+.feedback-check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.feedback-check .checkmark {
+  position: relative;
+  display: inline-block;
+  min-width: 22px;
+  height: 22px;
+  border: 2px solid #ED0E16;;
+  border-radius: 4px;
+  transition: all 0.25s ease;
+}
+
+.feedback-check input:checked + .checkmark::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  background-color: #ED0E16;
+  border-radius: 2px;
+  transition: all 0.25s ease;
+}
+
+.feedback-check:hover .checkmark {
+  box-shadow: 0 0 6px rgba(229, 57, 53, 0.5);
+}
+
+/* Конец */
+
+/* Диалоговое окно согласие на обработку */
+
+.agreement-window[open] {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  border: 2px solid red;
+  border-radius: 16px;
+  padding: 50px;
+  transform: translate(-50%, -50%);
+}
+
+.agreement-window::backdrop {
+  opacity: 0.75;
+  background-color: black;
+}
+
+.agreement-window__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  text-align: start;
+}
+
+.agreement-window__content-text {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.agreement-window-list {
+   display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.agreement-window-list-item-text {
+  margin-top: 15px;
+}
+
+.agreement-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.agreement-buttons-agree {
+  padding: 18px 24px;
+  border-radius: 16px;
+  text-align: center;
+  inline-size: 30%;
+}
+
+.agreement-buttons-disagree {
+  padding: 18px 24px;
+  border: 2px solid red;
+  border-radius: 16px;
+  text-align: center;
+  inline-size: 30%;
+}
+
+
+@media (width <=1439px) {
+  .agreement-window[open] {
+    width: 75%;
+  }
+}
+
+@media (width <=767px) {
+  .agreement-window[open] {
+    width: 85%;
+    padding: 25px;
+  }
+}
+
+/* Конец */

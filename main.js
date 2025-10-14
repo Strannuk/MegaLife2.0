@@ -131,8 +131,6 @@ function toggleDropdown(button) {
 
 // // Конец
 
-// // Форма обратной связи
-
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector(".feedback__form");
   if (!form) return;
@@ -140,22 +138,24 @@ document.addEventListener("DOMContentLoaded", () => {
   const nameInput = form.querySelector('input[type="text"]');
   const phoneInput = form.querySelector("#phone");
   const messageInput = form.querySelector("textarea");
+  const agreementCheckbox = form.querySelector('input[name="agreement"]');
 
-  function showError(el, text) {
-    el.classList.add("error");
-    let msg = el.parentNode.querySelector(".error-message");
-    if (!msg) {
-      msg = document.createElement("div");
-      msg.className = "error-message";
-      el.parentNode.appendChild(msg);
-    }
-    msg.textContent = text;
+  // Создаем отдельный контейнер для ошибок под textarea
+  let errorContainer = form.querySelector(".feedback-error-container");
+  if (!errorContainer) {
+    errorContainer = document.createElement("div");
+    errorContainer.className = "feedback-error-container";
+    messageInput.parentNode.insertBefore(errorContainer, messageInput.nextSibling);
   }
 
-  function removeError(el) {
-    el.classList.remove("error");
-    const msg = el.parentNode.querySelector(".error-message");
-    if (msg) msg.remove();
+  function showError(text) {
+    errorContainer.textContent = text;
+    errorContainer.style.display = "block";
+  }
+
+  function clearError() {
+    errorContainer.textContent = "";
+    errorContainer.style.display = "none";
   }
 
   if (nameInput) {
@@ -197,25 +197,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-
-    [nameInput, phoneInput, messageInput].forEach((el) => removeError(el));
+    clearError();
 
     if (!nameInput || nameInput.value.trim().length < 2) {
-      showError(nameInput, "Введите имя (только буквы, минимум 2 символа)");
+      showError("Введите имя (только буквы, минимум 2 символа)");
       nameInput.focus();
       return;
     }
 
     const digits = phoneInput ? phoneInput.value.replace(/\D/g, "") : "";
     if (!phoneInput || digits.length !== 11) {
-      showError(phoneInput, "Введите полный номер: +7 (XXX) XXX-XX-XX");
+      showError("Введите полный номер: +7 (XXX) XXX-XX-XX");
       phoneInput.focus();
       return;
     }
 
     if (!messageInput || messageInput.value.trim().length === 0) {
-      showError(messageInput, "Введите сообщение");
+      showError("Введите сообщение");
       messageInput.focus();
+      return;
+    }
+
+    if (!agreementCheckbox || !agreementCheckbox.checked) {
+      showError("Необходимо согласие на обработку персональных данных");
+      agreementCheckbox.focus();
       return;
     }
 
@@ -233,8 +238,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     form.reset();
+    clearError();
   });
 });
+
 
 //
 
@@ -367,9 +374,37 @@ window.addEventListener('resize', () => {
 
 // Конец
 
+// Форма согласия обработки данных 
 
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector(".feedback__form");
+  if (!form) return;
 
+  const agreementCheckbox = form.querySelector('input[name="agreement"]');
+  const agreementDialog = document.getElementById("agreement-dialog");
+  const acceptBtn = document.getElementById("accept-agreement");
+  const declineBtn = document.getElementById("decline-agreement");
 
+  if (agreementCheckbox && agreementDialog) {
+    agreementCheckbox.addEventListener("change", function (e) {
+      if (agreementCheckbox.checked) {
+        // если пользователь пытается поставить галочку
+        agreementDialog.showModal();
+        // отменяем отметку до подтверждения
+        agreementCheckbox.checked = false;
+      }
+    });
 
+    acceptBtn.addEventListener("click", () => {
+      agreementCheckbox.checked = true;
+      agreementDialog.close();
+    });
 
+    declineBtn.addEventListener("click", () => {
+      agreementCheckbox.checked = false;
+      agreementDialog.close();
+    });
+  }
+});
 
+// Конец

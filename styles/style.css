@@ -652,6 +652,14 @@
   resize: none;
 }
 
+.feedback-check {
+  display: flex;
+  gap: 20px;
+  font-size: 12px;
+   cursor: pointer;
+   align-items: center;
+}
+
 .feedback__actions-text {
   opacity: 0.7;
   color: var(--main-text-color, #2d313c);
@@ -738,9 +746,7 @@
 .submitted-window__content-button {
   border-radius: 8px;
   padding: 20px 0;
-  color: var(--submain-text-color, #fff);
   text-align: center;
-  background-color: var(--main-button-color, #ed0e16);
   inline-size: 80%;
 }
 
@@ -854,6 +860,10 @@
 
   .feedback {
     padding: 50px;
+  }
+
+  .feedback-check {
+    font-size: 10px;
   }
 
   .faq {

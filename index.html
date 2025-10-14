@@ -48,65 +48,65 @@
     <link rel="stylesheet" href="./styles/components.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
-    <link rel="preload" as="image" href="./images/heroblockimg.png">
+    <link rel="preload" as="image" href="./images/heroblockimg.png" />
   </head>
 
   <body class="page" id="page">
     <div class="scrollProgress" id="scrollProgress"></div>
     <header class="header">
       <div class="header__contain">
-      <div class="header__container">
-        <div class="header__logo">
-          <a class="header__logo-link" href="#page">
-            <img
-              class="header__logo-link-image"
-              src="./images/logo.svg"
-              alt="Мегалайф"
-            />
-            <p class="header__logo-link-text">Megalife</p>
-          </a>
+        <div class="header__container">
+          <div class="header__logo">
+            <a class="header__logo-link" href="#page">
+              <img
+                class="header__logo-link-image"
+                src="./images/logo.svg"
+                alt="Мегалайф"
+              />
+              <p class="header__logo-link-text">Megalife</p>
+            </a>
+          </div>
+          <button class="burger" aria-label="Меню">
+            <span></span><span></span><span></span>
+          </button>
         </div>
-        <button class="burger" aria-label="Меню">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-      <nav class="header__navigation">
-        <ul class="header__navigation-list">
-          <li class="header__navigation-list-item">
-            <a class="header__navigation-list-item-link" href="#video"
-              >Видеонаблюдение</a
+        <nav class="header__navigation">
+          <ul class="header__navigation-list">
+            <li class="header__navigation-list-item">
+              <a class="header__navigation-list-item-link" href="#video"
+                >Видеонаблюдение</a
+              >
+            </li>
+            <li class="header__navigation-list-item">
+              <a class="header__navigation-list-item-link" href="#skyd">СКУД</a>
+            </li>
+            <li class="header__navigation-list-item">
+              <a class="header__navigation-list-item-link" href="#domofon"
+                >IP-Домофония</a
+              >
+            </li>
+            <li class="header__navigation-list-item">
+              <a class="header__navigation-list-item-link" href="#ip-tv"
+                >Кабельное ТВ</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="header__contact">
+          <address class="header__contact-block">
+            <span class="header__contact-block-title">Техподдержка</span>
+            <a class="header__contact-block-telephone" href="tel:+79782001515"
+              >+7 978 200-15-15</a
             >
-          </li>
-          <li class="header__navigation-list-item">
-            <a class="header__navigation-list-item-link" href="#skyd">СКУД</a>
-          </li>
-          <li class="header__navigation-list-item">
-            <a class="header__navigation-list-item-link" href="#domofon"
-              >IP-Домофония</a
-            >
-          </li>
-          <li class="header__navigation-list-item">
-            <a class="header__navigation-list-item-link" href="#ip-tv"
-              >Кабельное ТВ</a
-            >
-          </li>
-        </ul>
-      </nav>
-      <div class="header__contact">
-        <address class="header__contact-block">
-          <span class="header__contact-block-title">Техподдержка</span>
-          <a class="header__contact-block-telephone" href="tel:+79782001515"
-            >+7 978 200-15-15</a
+          </address>
+          <button
+            class="header__contact-button button--red"
+            data-feedback
+            type="button"
           >
-        </address>
-        <button
-          class="header__contact-button button--red"
-          data-feedback
-          type="button"
-        >
-          Оставить заявку
-        </button>
-      </div>
+            Оставить заявку
+          </button>
+        </div>
       </div>
     </header>
     <main class="main">
@@ -534,15 +534,17 @@
             <button type="submit" class="feedback__button button--red">
               Отправить
             </button>
-            <span class="feedback__actions-text">
-              Нажимая, вы соглашаетесь с
-              <a
-                class="feedback__text-decoration"
-                href="./file/Политика+обработки+и+защиты+ПД+ООО+Мегалаиф.pdf"
-                target="_blank"
-                >правилами передачи данных и политикой конфиденциальности</a
+            <label class="feedback-check">
+              <input type="checkbox" name="agreement" required />
+              <span class="checkmark"></span>
+              <span class="feedback__actions-text">
+                Нажимая кнопку «Отправить», я даю свое согласие на обработку
+                моих персональных данных, в соответствии с Федеральным законом
+                от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях
+                и для целей, определенных в Согласии на обработку персональных
+                данных</span
               >
-            </span>
+            </label>
           </div>
         </form>
       </section>
@@ -850,7 +852,7 @@
           Ваша заявка отправлена, мы скоро с вами свяжемся
         </p>
         <button
-          class="submitted-window__content-button"
+          class="submitted-window__content-button button--red"
           type="button"
           onclick="window.submitted__window.close()"
         >
@@ -858,25 +860,120 @@
         </button>
       </div>
     </dialog>
+    <dialog class="agreement-window" id="agreement-dialog">
+      <div class="agreement-window__content">
+        <img
+          class="agreement-window__content-image"
+          aria-hidden="true"
+          aria-label="Логотип компании Мегалайф"
+          src="./images/logowithtext.svg"
+          alt="Мегалайф"
+          loading="lazy"
+        />
+        <div class="agreement-window__content-text">
+          <p>
+            Настоящим в соответствии с Федеральным законом № 152-ФЗ «О
+            персональных данных» от 27.07.2006 года свободно, своей волей и в
+            своем интересе выражаю свое безусловное согласие на обработку моих
+            персональных данных Общество с ограниченной ответственностью
+            «МЕГАЛАЙФ» (ОГРН 1209100013473 ИНН 9102267722), зарегистрированным в
+            соответствии с законодательством РФ по адресу: 295022, Республика
+            Крым, город Симферополь, Кечкеметская ул., д. 190, кв. 30 (далее по
+            тексту - Оператор).
+          </p>
+          <ol class="agreement-window-list">
+            <li class="agreement-window-list-item" type="1">
+              Согласие дается на обработку одной, нескольких или всех категорий
+              персональных данных, не являющихся специальными или
+              биометрическими, предоставляемых мною, которые могут включать:
+              <p class="agreement-window-list-item-text">- Имя;</p>
+              <p class="agreement-window-list-item-text">- Телефон.</p>
+            </li>
+            <li type="1">
+              Оператор может совершать следующие действия: сбор; запись;
+              систематизация; накопление; хранение; уточнение (обновление,
+              изменение); извлечение; использование; блокирование; удаление;
+              уничтожение.
+            </li>
+            <li type="1">
+              Способы обработки: как с использованием средств автоматизации, так
+              и без их использования.
+            </li>
+            <li type="1">
+              Цель обработки: предоставление мне услуг/работ, включая,
+              направление в мой адрес уведомлений, касающихся предоставляемых
+              услуг/работ, подготовка и направление ответов на мои запросы,
+              направление в мой адрес информации о
+              мероприятиях/товарах/услугах/работах Оператора.
+            </li>
+            <li type="1">
+              В связи с тем, что Оператор может осуществлять обработку моих
+              персональных данных посредством программы для ЭВМ «1С-Битрикс24»,
+              я даю свое согласие Оператору на осуществление соответствующего
+              поручения ООО «1С-Битрикс», (ОГРН 5077746476209),
+              зарегистрированному по адресу: 109544, г. Москва, б-р Энтузиастов,
+              д. 2, эт.13, пом. 8-19.
+            </li>
+            <li type="1">
+              Настоящее согласие действует до момента его отзыва путем
+              направления соответствующего уведомления на электронный адрес
+              <a
+                  class="information__text-address-list-item-decoration"
+                  href="mailto:admin@crimea.mega-life.ru"
+                  >admin@crimea.mega-life.ru</a
+                >
+                 или направления по адресу 295022,
+              Республика Крым, г. Симферополь, ул. Кечкеметская, дом 190, кв. 30
+            </li>
+            <li type="1">
+              В случае отзыва мною согласия на обработку персональных данных
+              Оператор вправе продолжить обработку персональных данных без моего
+              согласия при наличии оснований, предусмотренных Федеральным
+              законом №152-ФЗ «О персональных данных» от 27.07.2006 г.
+            </li>
+          </ol>
+          <div class="agreement-buttons">
+            <button class="agreement-buttons-agree button--red" id="accept-agreement">Принимаю</button>
+            <button class="agreement-buttons-disagree" id="decline-agreement">Не принимаю</button>
+          </div>
+        </div>
+      </div>
+    </dialog>
     <div class="mobile-overlay"></div>
     <nav class="mobile-menu">
       <div class="mobile-menu-inner">
         <ul class="mobile-menu__list">
-          <li class="mobile-menu__list-item"><a class="mobile-menu__list-link" href="#video">Видеонаблюдение</a></li>
-          <li class="mobile-menu__list-item"><a class="mobile-menu__list-link" href="#skyd">СКУД</a></li>
-          <li class="mobile-menu__list-item"><a class="mobile-menu__list-link" href="#domofon">IP-Домофония</a></li>
-          <li class="mobile-menu__list-item"><a class="mobile-menu__list-link" href="#ip-tv">Кабельное ТВ</a></li>
+          <li class="mobile-menu__list-item">
+            <a class="mobile-menu__list-link" href="#video">Видеонаблюдение</a>
+          </li>
+          <li class="mobile-menu__list-item">
+            <a class="mobile-menu__list-link" href="#skyd">СКУД</a>
+          </li>
+          <li class="mobile-menu__list-item">
+            <a class="mobile-menu__list-link" href="#domofon">IP-Домофония</a>
+          </li>
+          <li class="mobile-menu__list-item">
+            <a class="mobile-menu__list-link" href="#ip-tv">Кабельное ТВ</a>
+          </li>
         </ul>
         <div class="mobile-menu__footer">
           <address class="mobile-menu__footer-address">
             <span class="mobile-menu__footer-address-text">Техподдержка</span>
-            <a class="mobile-menu__footer-address-number" href="tel:+79782001515">+7 978 200-15-15</a>
+            <a
+              class="mobile-menu__footer-address-number"
+              href="tel:+79782001515"
+              >+7 978 200-15-15</a
+            >
           </address>
-          <button class="mobile-menu__footer-button button--red" data-feedback
-          type="button">Оставить заявку</button>
+          <button
+            class="mobile-menu__footer-button button--red"
+            data-feedback
+            type="button"
+          >
+            Оставить заявку
+          </button>
         </div>
       </div>
     </nav>
   </body>
 </html>
-

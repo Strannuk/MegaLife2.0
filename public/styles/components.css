@@ -196,7 +196,7 @@
   top: 50%;
   width: 4px;
   height: 4px;
-  background-color: red; /* цвет точки */
+  background-color: red; 
   border-radius: 50%;
   transform: translateY(-50%);
   margin-inline-start: 4px;
@@ -212,7 +212,7 @@
   top: 50%;
   width: 4px;
   height: 4px;
-  background-color: white; /* цвет точки */
+  background-color: white;
   border-radius: 50%;
   transform: translateY(-50%);
   margin-inline-start: 4px;
@@ -231,7 +231,7 @@
   top: 50%;
   width: 4px;
   height: 4px;
-  background-color: black; /* цвет точки */
+  background-color: black; 
   border-radius: 50%;
   transform: translateY(-50%);
   margin-inline-start: 4px;
